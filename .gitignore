@@ -1,0 +1,7 @@
+# jupyter
+__pycache__
+.ipynb_checkpoints
+*.ipynb
+
+#misc
+.DS_Store
