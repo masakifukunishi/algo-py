@@ -1,4 +1,6 @@
 from typing import List
+
+
 def selection_sort(numbers: List[int]) -> List[int]:
     len_numbers = len(numbers)
     for i in range(len_numbers):
@@ -8,6 +10,7 @@ def selection_sort(numbers: List[int]) -> List[int]:
                 min_idx = j
         numbers[i], numbers[min_idx] = numbers[min_idx], numbers[i]
     return numbers
+
 
 if __name__ == '__main__':
     nums = [5, 2, 3, 4, 1]

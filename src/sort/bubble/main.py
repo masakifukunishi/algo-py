@@ -1,4 +1,6 @@
 from typing import List
+
+
 def bubble_sort(numbers: List[int]) -> List[int]:
     len_numbers = len(numbers)
     for i in range(len_numbers):
@@ -6,6 +8,7 @@ def bubble_sort(numbers: List[int]) -> List[int]:
             if numbers[j] > numbers[j+1]:
                 numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
     return numbers
+
 
 if __name__ == '__main__':
     nums = [5, 2, 3, 4, 1]
