@@ -9,6 +9,7 @@ def selection_sort(numbers: List[int]) -> List[int]:
             if numbers[min_idx] > numbers[j]:
                 min_idx = j
         numbers[i], numbers[min_idx] = numbers[min_idx], numbers[i]
+        
     return numbers
 
 

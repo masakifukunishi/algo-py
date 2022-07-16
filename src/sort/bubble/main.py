@@ -7,6 +7,7 @@ def bubble_sort(numbers: List[int]) -> List[int]:
         for j in range(len_numbers - 1 - i):
             if numbers[j] > numbers[j+1]:
                 numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
+                
     return numbers
 
 
