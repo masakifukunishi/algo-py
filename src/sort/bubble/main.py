@@ -8,4 +8,5 @@ def bubble_sort(numbers: List[int]) -> List[int]:
     return numbers
 
 if __name__ == '__main__':
-    print(bubble_sort([5, 2, 3, 4]))
+    nums = [5, 2, 3, 4, 1]
+    print(bubble_sort(nums))
