@@ -23,9 +23,6 @@ class LinkedList(object):
         while last_node.next:
             last_node = last_node.next
         last_node.next = new_node
-
-        print(self.head)
-
         
     def insert(self, data: Any) -> None:
         new_node = Node(data)
