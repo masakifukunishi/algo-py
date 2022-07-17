@@ -5,11 +5,12 @@ from typing import Any
 class Node(object):
     def __init__(self, data: Any, next_node: Node = None):
         self.data = data
-        self.next = None
+        self.next = next_node
 
 
 class LinkedList(object):
-    def __init__(self, head=None) -> None:
+    
+    def __init__(self, head = None) -> None:
         self.head = head
 
     def append(self, data: Any) -> None:
@@ -23,6 +24,9 @@ class LinkedList(object):
             last_node = last_node.next
         last_node.next = new_node
 
+        print(self.head)
+
+        
     def insert(self, data: Any) -> None:
         new_node = Node(data)
         new_node.next = self.head
@@ -52,35 +56,11 @@ class LinkedList(object):
         previous_node.next = current_node.next
         current_node = None
 
-    def reverse_iterative(self) -> None:
-        previous_node = None
-        current_node = self.head
-        while current_node:
-            next_node = current_node.next
-            current_node.next = previous_node
-            previous_node = current_node
-            current_node = next_node
-
-        self.head = previous_node 
-
-    def reverse_recursive(self) -> None:
-        def _reverse_recursive(current_node: Node, previous_node: Node) -> Node:
-            if not current_node:
-                return previous_node
-
-            next_node = current_node.next
-            current_node.next = previous_node
-            previous_node = current_node
-            current_node = next_node
-            return _reverse_recursive(current_node, previous_node)
-        
-        self.head = _reverse_recursive(self.head, None)
+    
 
 if __name__ == "__main__":
     l = LinkedList()
     l.append(1)
     l.append(2)
     l.append(3)
-    l.print()
-    l.reverse_recursive()
     l.print()
