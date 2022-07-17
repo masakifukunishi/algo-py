@@ -9,8 +9,8 @@ class Node(object):
 
 
 class LinkedList(object):
-    
-    def __init__(self, head = None) -> None:
+
+    def __init__(self, head=None) -> None:
         self.head = head
 
     def append(self, data: Any) -> None:
@@ -23,7 +23,7 @@ class LinkedList(object):
         while last_node.next:
             last_node = last_node.next
         last_node.next = new_node
-        
+
     def insert(self, data: Any) -> None:
         new_node = Node(data)
         new_node.next = self.head
@@ -53,7 +53,6 @@ class LinkedList(object):
         previous_node.next = current_node.next
         current_node = None
 
-    
 
 if __name__ == "__main__":
     l = LinkedList()

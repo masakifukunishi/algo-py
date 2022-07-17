@@ -17,7 +17,7 @@ def lenear_search(numbers: List[int], value: int) -> IndexNum:
 #         mid = (left + right) // 2
 #         if numbers[mid] == value:
 #             return mid
-#         elif numbers[mid] < value: 
+#         elif numbers[mid] < value:
 #             left = mid + 1
 #         else:
 #             right = mid - 1
@@ -39,8 +39,8 @@ def binary_search(numbers: List[int], value: int) -> IndexNum:
             return _binary_search(numbers, value, left, mid - 1)
 
     return _binary_search(numbers, value, 0, len(numbers) - 1)
-    
-    
+
+
 if __name__ == '__main__':
     nums = [0, 2, 4, 5, 6, 9, 14, 19, 20]
     print(binary_search(nums, 4))

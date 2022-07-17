@@ -54,10 +54,10 @@ class DoublyLinkedList(object):
                 current_node = None
                 self.head = next_node
                 return
-        
+
         while current_node and current_node.data != data:
             current_node = current_node.next
-        
+
         if current_node is None:
             return
 
@@ -73,7 +73,7 @@ class DoublyLinkedList(object):
             next_node.prev = prev_node
             current_node = None
 
-    
+
 if __name__ == "__main__":
     d = DoublyLinkedList()
     d.append(1)
