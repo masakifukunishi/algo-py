@@ -1,14 +1,11 @@
 version: "3"
 services:
-  jupyterlab:
+  python3:
     container_name: algo-py
     platform: linux/amd64
     build:
       context: ./
       dockerfile: Dockerfile
-    ports:
-      - "58888:8888"
+    tty: true
     volumes:
       - "./src:/src"
-    # command: "jupyter lab --no-browser --ip=0.0.0.0 --allow-root"
-    command: "jupyter lab --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token=''"
