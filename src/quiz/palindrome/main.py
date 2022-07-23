@@ -12,6 +12,7 @@ racecar
 
 from typing import Generator
 
+
 def is_palindrome(strings: str) -> bool:
     len_strings = len(strings)
     if not len_strings:
